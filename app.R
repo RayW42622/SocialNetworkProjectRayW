@@ -39,16 +39,16 @@ ui <-fluidPage(
     
     #Card1
     card(card_header("All characters, choose how to sort"),
-         selectInput("Nodes",
+         selectInput("NodesA",
                      "Nodes by color", 
                      choices = list( "Sides" = "Side"), 
                      selected = 1),
-         selectInput("Axis",
+         selectInput("AxisA",
                      "Axis", 
                      choices = list("Home" = "Home", 
                                     "Origin" = "Origin"), 
                      selected = 1),
-         selectInput("size",
+         selectInput("sizeA",
                      "choose a centrality measure", 
                      choices = list("Degree Centrality" = "degree", 
                                     "Betweenness Centrality" = "betweenness")),
@@ -56,16 +56,16 @@ ui <-fluidPage(
     
     #Card1.5
     card(card_header("Same graph, omitted insignificant characters"),
-         selectInput("Nodes",
+         selectInput("NodesB",
                      "Nodes by color", 
                      choices = list( "Sides" = "Side"), 
                      selected = 1),
-         selectInput("Shape",
+         selectInput("ShapeB",
                      "Nodes by shape", 
                      choices = list("Home" = "Home", 
                                     "Origin" = "Origin"), 
                      selected = 1),
-         selectInput("size",
+         selectInput("sizeB",
                      "choose a centrality measure", 
                      choices = list("Degree Centrality" = "degree", 
                                     "Betweenness Centrality" = "betweenness")),
@@ -73,17 +73,17 @@ ui <-fluidPage(
     
     #Card1.55
     card(card_header("Let's focus on the transforming characters"),
-         selectInput("Nodes",
+         selectInput("NodesC",
                      "Nodes by color", 
                      choices = list( "Sides" = "Side",
                                      "True Identity" = "True_Identity"),
                      selected = 1),
-         selectInput("Axis",
+         selectInput("AxisC",
                      "Axis", 
                      choices = list("Home" = "Home", 
                                     "Origin" = "Origin"), 
                      selected = 1),
-         selectInput("size",
+         selectInput("sizeC",
                      "choose a centrality measure", 
                      choices = list("Degree Centrality" = "degree", 
                                     "Betweenness Centrality" = "betweenness")),
@@ -99,10 +99,21 @@ ui <-fluidPage(
            min = 1, 
            max = 100 
          ),
-         selectInput("size",
+         selectInput("NodesD",
+                     "Nodes by color", 
+                     choices = list( "Sides" = "Side",
+                                     "True Identity" = "True_Identity"),
+                     selected = 1),
+         selectInput("sizeD",
                      "choose a centrality measure", 
                      choices = list("Degree Centrality" = "degree", 
-                                    "Betweenness Centrality" = "betweenness")),
+                                    "Betweenness Centrality" = "betweenness"),
+                     selected = 1),
+         selectInput("ShapeD",
+                     "Nodes by shape", 
+                     choices = list("Home" = "Home", 
+                                    "Origin" = "Origin"), 
+                     selected = 1),
          plotOutput("JTWA_NetworkIDTH"), height = "1000px"),
     
     #Card2
@@ -116,7 +127,7 @@ ui <-fluidPage(
     
     #Card3
     card(card_header("bar"),
-         selectInput("size",
+         selectInput("sizeE",
                      "choose a centrality measure", 
                      choices = list("Degree Centrality" = "degree", 
                                     "Betweenness Centrality" = "betweenness"), 
@@ -156,13 +167,13 @@ network <- reactive({
 })
 output$JTWA_NetworkID <- renderPlot({
   JTWA_net <- network()
-  p<- ggraph(JTWA_net, layout="hive", axis = .data[[input$Axis]], sort.by = .data[[input$Nodes]]) +
+  p<- ggraph(JTWA_net, layout="hive", axis = .data[[input$AxisA]], sort.by = .data[[input$NodesA]]) +
     geom_edge_arc(aes(width=Density*1.5), alpha = 0.3,
                   end_cap = circle(4, 'mm'),
                   alpha = 0.2) + 
     geom_axis_hive(colour = "grey", size = 1, length = 5, label = TRUE) +
     scale_edge_width(range = c(.1,3))+ 
-    geom_node_point(aes(color=.data[[input$Nodes]], size = .data[[input$size]]), show.legend = TRUE) +
+    geom_node_point(aes(color=.data[[input$NodesA]], size = .data[[input$sizeA]]), show.legend = TRUE) +
     scale_color_manual(values=c("red", "black", "lightblue")) +
     scale_size(range = c(1, 10))+
     geom_node_text(aes(label=Revised_Names), color = "black", size = 2) + 
@@ -191,7 +202,7 @@ output$JTWA_NetworkIDSimple <- renderPlot({
   JTWA_net <- network1.5()
   p<- ggraph(JTWA_net, layout = 'sugiyama') +
     geom_edge_link(aes(width=Density*2), alpha = 0.4, color = "grey", arrow = arrow(length = unit(4, 'mm')))+ 
-    geom_node_point(aes(color=.data[[input$Nodes]], size = .data[[input$size]], shape = .data[[input$Shape]])) +
+    geom_node_point(aes(color=.data[[input$NodesB]], size = .data[[input$sizeB]], shape = .data[[input$ShapeB]])) +
     scale_color_manual(values=c("red", "black", "lightblue")) +
     geom_node_text(aes(label=Revised_Names), color = "black", size = 2, repel = TRUE) + 
     theme_void()
@@ -216,13 +227,13 @@ network1.55 <- reactive({
 })
 output$JTWA_NetworkIDTF <- renderPlot({
   JTWA_net <- network1.55()
-  p<- ggraph(JTWA_net, layout="hive", axis = .data[[input$Axis]], sort.by = .data[[input$Nodes]]) +
+  p<- ggraph(JTWA_net, layout="hive", axis = .data[[input$AxisC]], sort.by = .data[[input$NodesC]]) +
     geom_edge_arc(aes(width=Density*1.5), alpha = 0.3,
                   end_cap = circle(4, 'mm'),
                   alpha = 0.2) + 
     geom_axis_hive(colour = "grey", size = 1, length = 5, label = TRUE) +
     scale_edge_width(range = c(.1,3))+ 
-    geom_node_point(aes(color=.data[[input$Nodes]], size = .data[[input$size]]), show.legend = TRUE) +
+    geom_node_point(aes(color=.data[[input$NodesC]], size = .data[[input$sizeC]]), show.legend = TRUE) +
     scale_size(range = c(1, 10))+
     geom_node_text(aes(label=Revised_Names), color = "black", size = 2) + 
     theme_void() + 
@@ -250,7 +261,7 @@ output$JTWA_NetworkIDTH <- renderPlot({
   JTWA_net <- JTWA_net |> activate(edges) |> filter(Density >= input$thres)
   p<- ggraph(JTWA_net, layout = 'fr') +
     geom_edge_link(aes(width=Density*2), alpha = 0.4, color = "grey", arrow = arrow(length = unit(4, 'mm')))+ 
-    geom_node_point(aes(color=.data[[input$Nodes]], size = .data[[input$size]], shape = .data[[input$Shape]])) +
+    geom_node_point(aes(color=.data[[input$NodesD]], size = .data[[input$sizeD]], shape = .data[[input$ShapeD]])) +
     geom_node_text(aes(label=Revised_Names), color = "black", size = 2, repel = TRUE) + 
     theme_void()
   
@@ -340,7 +351,7 @@ network4 <- reactive({
 output$JTWA_Bar <- renderPlot({
   JTWA_net <- network() 
   JTWA_df <- JTWA_net |> activate(nodes) |> as_tibble()
-  p<- ggplot(JTWA_df, aes(x= reorder(Revised_Names, .data[[input$size]]), y=.data[[input$size]])) + 
+  p<- ggplot(JTWA_df, aes(x= reorder(Revised_Names, .data[[input$sizeE]]), y=.data[[input$sizeE]])) + 
     geom_col(fill = "lightblue") + 
     coord_flip() 
   
