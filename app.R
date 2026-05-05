@@ -141,8 +141,8 @@ server <- function(input, output) {
 
 #Card1
 network <- reactive({ 
-  JTWA_nodes <-  read.csv("~/Documents/ShinyAPP/Data/NodesJTWA.csv")
-  JTWA_edges <- read.csv("~/Documents/ShinyAPP/Data/EdgesJTWA.csv")
+  JTWA_nodes <-  read.csv("Data/NodesJTWA.csv")
+  JTWA_edges <- read.csv("Data/EdgesJTWA.csv")
   
   JTWA_net <- tbl_graph(nodes = JTWA_nodes, 
                         edges= JTWA_edges,
@@ -174,8 +174,8 @@ output$JTWA_NetworkID <- renderPlot({
 
 # CARD 1.5
 network1.5 <- reactive({ 
-  JTWA_nodes <-  read.csv("~/Documents/ShinyAPP/Data/NodesJTWA.csv")
-  JTWA_edges <- read.csv("~/Documents/ShinyAPP/Data/EdgesJTWA.csv")
+  JTWA_nodes <-  read.csv("Data/NodesJTWA.csv")
+  JTWA_edges <- read.csv("Data/EdgesJTWA.csv")
   
   JTWA_net <- tbl_graph(nodes = JTWA_nodes, 
                         edges= JTWA_edges,
@@ -201,8 +201,8 @@ output$JTWA_NetworkIDSimple <- renderPlot({
 
 # CARD 1.55
 network1.55 <- reactive({ 
-  JTWA_nodes <-  read.csv("~/Documents/ShinyAPP/Data/NodesJTWA.csv")
-  JTWA_edges <- read.csv("~/Documents/ShinyAPP/Data/EdgesJTWA.csv")
+  JTWA_nodes <-  read.csv("Data/NodesJTWA.csv")
+  JTWA_edges <- read.csv("Data/EdgesJTWA.csv")
   
   JTWA_net <- tbl_graph(nodes = JTWA_nodes, 
                         edges= JTWA_edges,
@@ -233,8 +233,8 @@ output$JTWA_NetworkIDTF <- renderPlot({
 
 #Card1.555
 network1.555 <- reactive({ 
-  JTWA_nodes <-  read.csv("~/Documents/ShinyAPP/Data/NodesJTWA.csv")
-  JTWA_edges <- read.csv("~/Documents/ShinyAPP/Data/EdgesJTWA.csv")
+  JTWA_nodes <-  read.csv("Data/NodesJTWA.csv")
+  JTWA_edges <- read.csv("Data/EdgesJTWA.csv")
   
   JTWA_net <- tbl_graph(nodes = JTWA_nodes, 
                         edges= JTWA_edges,
@@ -261,8 +261,8 @@ output$JTWA_NetworkIDTH <- renderPlot({
 
 network2 <- reactive({
   set.seed(123)
-  JTWA_nodes <-  read.csv("~/Documents/ShinyAPP/Data/NodesJTWA.csv")
-  JTWA_edges <- read.csv("~/Documents/ShinyAPP/Data/EdgesJTWA.csv")
+  JTWA_nodes <-  read.csv("Data/NodesJTWA.csv")
+  JTWA_edges <- read.csv("Data/EdgesJTWA.csv")
   
   JTWA_net <- tbl_graph(nodes = JTWA_nodes, 
                         edges= JTWA_edges,
@@ -324,8 +324,8 @@ output$int_network <- renderVisNetwork({
 
 #Card4
 network4 <- reactive({
-  JTWA_nodes <-  read.csv("~/Documents/ShinyAPP/Data/NodesJTWA.csv")
-  JTWA_edges <- read.csv("~/Documents/ShinyAPP/Data/EdgesJTWA.csv")
+  JTWA_nodes <-  read.csv("Data/NodesJTWA.csv")
+  JTWA_edges <- read.csv("Data/EdgesJTWA.csv")
   
   JTWA_net <- tbl_graph(nodes = JTWA_nodes, 
                         edges= JTWA_edges,
