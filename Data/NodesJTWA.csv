@@ -1,0 +1,141 @@
+Name,Initial_Label,Revised_Names,Chinese,Origin,Side,Home,True_Identity,Have_Alternative,Insignificant_Characters
+1,Sun Wukong,Sun Wukong,孙悟空,Novel,Good,Lingshan,Sun Wukong,1,0
+2,Tang Monk,Tang Monk,唐僧,Novel,Good,Lingshan,Tang Monk,0,0
+3,Zhu Bajie,Zhu Bajie,猪八戒,Novel,Good,Lingshan,Zhu Bajie,1,0
+4,Tang Taizong,Tang Taizong,唐太宗,History,Good,Earth,Tang Taizong,0,0
+5,Sha Seng,Sha Seng,沙僧,Novel,Good,Lingshan,Sha Seng,0,0
+6,Xiao Bailong,Xiao Bailong,小白龙,Novel,Good,Sea,Xiao Bailong,1,0
+7,Ru Lai,Ru Lai,如来佛祖,Buddha,Good,Lingshan,Ru Lai,0,0
+8,Guan Yin,Guan Yin,观音菩萨,Buddha,Good,Lingshan,Guan Yin,0,0
+9,Nameless Buddha,Nameless Buddha,无名佛,Buddha,Good,Lingshan,Nameless Buddha,0,0
+10,A Nan & Jia Ye,A Nan & Jia Ye,阿难，迦叶,Buddha,Evil,Lingshan,A Nan & Jia Ye,0,0
+11,Ran Deng,Ran Deng,燃灯古佛,Buddha,Good,Lingshan,Ran Deng,0,0
+12,Buddha Guard,Arhat,金刚,Buddha,Good,Lingshan,Arhat,0,1
+13,Jade Emperor,Jade Emperor,玉帝,Tao,Good,Celestial Court,Jade Emperor,0,0
+14,Shrimp Soldier,Shrimp Soldier,虾兵,Tao,Good,Sea,Shrimp Soldier,0,1
+15,Wu Ji,Wu Ji,武吉,Tao,Evil,Celestial Court,Wu Ji,0,0
+16,Ao Qin,Dragon King of South Sea,敖钦（南海龙王）,Tao,Good,Sea,Dragon King of North Sea,0,0
+17,Turtle Chancellor,Turtle Chancellor,龟丞相,Tao,Good,Sea,Turtle Chancellor,0,0
+18,Wude Xingjun,Wude Xingjun,武德星君,Tao,Evil,Celestial Court,Wude Xingjun,0,0
+19,Jinghe Longwang,Dragon King of Jinghe,泾河龙王,Tao,Good,Sea,Dragon King of Jinghe,0,0
+20,Leisheng Puhuatianzun,Leisheng Puhuatianzun,雷声普化天尊,Tao,Good,Celestial Court,Leisheng Puhuatianzun,0,0
+21,Crab Soldier,Crab Soldier,蟹将,Tao,Good,Sea,Crab Soldier,0,1
+22,Weihe Longwang,Dragon King of Weihe,渭河龙王,Original,Evil,Sea,Dragon King of Weihe,0,0
+23,De Tianshi,De Tianshi,德天师,Tao,Good,Celestial Court,De Tianshi,0,0
+24,Shuide Xingjun,Shuide Xingjun,水德星君,Tao,Good,Celestial Court,Shuide Xingjun,0,0
+25,Celestial Guard,Celestial Guard,天庭守卫,Tao,Good,Celestial Court,Celestial Guard,0,1
+26,Ne Zha,Ne Zha,哪吒,Tao,Good,Celestial Court,Ne Zha,1,0
+27,Qin Guang Wang,Qin Guang Wang,秦广王,Tao,Good,Hell,Qin Guang Wang,0,0
+28,Wude Xingjun's wife,Wude Xingjun's wife,武德星君之妻,Original,Evil,Celestial Court,Wude Xingjun's wife,0,0
+29,Li Jing,Li Jing,李靖,Tao,Good,Celestial Court,Li Jing,0,0
+30,Monkeys,Monkeys,猴子,Novel,Good,Earth,Monkeys,0,1
+31,Kongque Mingwang,Mahāmāyūrī,孔雀明王,Buddha,Good,Lingshan,Mahāmāyūrī,0,0
+32,Mo Luo,Māra,魔罗,Buddha,Evil,Dark Realm,Mo Luo,1,0
+33,Ayinafa,Ayinafa,阿依纳伐,Original,Evil,Asura Realm,Ayinafa,0,0
+34,Yun Ju,Yun Ju,云居尊者,Original,Good,Lingshan,Yun Ju,0,0
+35,Black Cape,Black Cape,黑袍,Original,Evil,Dark Realm,Black Cape,1,0
+36,Wu Tian,Wu Tian,无天,Original,Evil,Dark Realm,Wu Tian,1,0
+37,Taishang Laojun,Taishang Laojun,太上老君,Tao,Good,Celestial Court,Taishang Laojun,0,0
+38,Dizang,Kṣitigarbha,地藏菩萨,Buddha,Good,Hell,Kṣitigarbha,0,0
+39,Ti Ting,Di Ting,谛听,Tao,Good,Hell,Di Ting,0,0
+40,Giant Scorpion,Giant Scorpion,巨蝎,Original,Evil,Dark Realm,Giant Scorpion,1,0
+41,Jie Yin (Fake),Amitābha (Fake),接引佛祖（假）,Original,Evil,Dark Realm,Yaoguai,0,0
+42,Black Lotus Messenger,Black Lotus Messenger,黑莲圣使,Original,Evil,Earth,Six-eared macaque,1,0
+43,Jie Yin,Amitābha,接引佛祖,Buddha,Good,Lingshan,Amitābha,0,0
+44,Bai Xiong,Bai Xiong,白熊尊者,Original,Good,Lingshan,Bai Xiong,0,0
+45,Tu Di,Tu Di,土地,Tao,Good,Earth,Tu Di,0,0
+46,Qiao Grandmother,Qiao Grandmother,乔奶奶,Original,Good,Earth,Qiao Grandmother,0,1
+47,Qiao Grandfather,Qiao Grandfather,乔爷爷,Original,Good,Earth,Qiao Grandfather,0,1
+48,Guan Yin (Fake),Guan Yin (Fake),观音菩萨（假）,Original,Evil,Earth,Six-eared macaque,1,0
+49,Lingyao,Lingyao,灵妖,Original,Evil,Dark Realm,Lingyao,0,0
+50,Bai He Tongzi (Fake),Bai He Tongzi (Fake),白鹤童子（假）,Original,Evil,Dark Realm,Yaoguai,0,0
+51,Fake Deities,Fake Deities,假天神,Original,Evil,Dark Realm,Yaoguai,0,0
+52,Zhu Bajie (Fake),Zhu Bajie (Fake),猪八戒（假）,Original,Evil,Earth,Six-eared macaque,1,0
+53,Long Nv (Fake),Long Nv (Fake),善财龙女（假）,Original,Evil,Dark Realm,Giant Scorpion,1,0
+54,Nine-Headed Bug,Nine-Headed Bug,九头虫,Novel,Evil,Sea,Nine-Headed Bug,0,0
+55,Tu Di (Fake),Tu Di (Fake),土地（假）,Original,Evil,Earth,Six-eared macaque,1,0
+56,Ti Ting (Fake),Di Ting (Fake),谛听（假）,Original,Evil,Earth,Six-eared macaque,1,0
+57,Ru Lai (Fake),Ru Lai (Fake),如来佛祖（假）,Original,Evil,Dark Realm,Wu Tian,1,0
+58,Nameless Buddha (Fake),Nameless Buddha (Fake),无名佛（假）,Original,Evil,Dark Realm,Yaoguai,0,0
+59,Mountain Guardian (Fake),Mountain Guardian (Fake),守山大神（假）,Original,Evil,Dark Realm,Yaoguai,0,1
+60,Jade Emperor (Fake),Jade Emperor (Fake),玉帝（假）,Original,Evil,Dark Realm,Yaoguai,0,0
+61,De Tianshi (Fake),De Tianshi (Fake),德天师（假）,Original,Evil,Dark Realm,Yaoguai,0,0
+62,Ne Zha (Fake),Ne Zha (Fake),哪吒（假）,Original,Evil,Dark Realm,Yaoguai,0,0
+63,Tang Monk (Fake),Tang Monk (Fake),唐僧（假）,Original,Evil,Dark Realm,Yaoguai,0,0
+64,Buddha Guard (Fake),Arhat (Fake),金刚（假）,Original,Evil,Dark Realm,Yaoguai,0,1
+65,A'long,A'long,阿龙,Original,Good,Earth,A'long,0,1
+66,Qiao Linger,Qiao Linger,乔灵儿,Original,Good,Earth,Ru Lai,0,0
+67,Lao Xv,Lao Xv,老许,Original,Good,Earth,Lao Xv,0,1
+68,Bully Hu,Bully Hu,胡恶霸,Original,Evil,Earth,Bully Hu,0,1
+69,White Lotus,White Lotus,白莲花,Original,Good,Earth,White Lotus,0,0
+70,Qiao Residents,Qiao Residents,乔家庄居民,Original,Good,Earth,Qiao Residents,0,1
+71,Female Gangster,Female Gangster,凤头帮女将,Original,Good,Earth,Female Gangster,0,1
+72,Residents,Residents from haunted village,饿鬼村居民,Original,Good,Earth,Residents,0,1
+73,Master Duli,Master Duli,都里大师,Original,Evil,Earth,Master Duli,0,0
+74,Shan Shen,Mountain God,山神,Tao,Good,Earth,Mountain God,0,0
+75,Dapeng Hufa,garuḍa,大鹏护法,Buddha,Good,Lingshan,garuḍa,0,0
+76,Judge,Judge,判官,Original,Evil,Earth,Judge,0,1
+77,Buddha Guards (W&B),Arhats (W&B),金刚（孙悟空，猪八戒）,Original,Good,Lingshan,Sun Wukong,1,0
+78,Rhino Guais,Rhino Guais,犀牛精,Original,Evil,Dark Realm,Rhino Guais,0,0
+79,Cloud&Wind Deities (Fake),Cloud&Wind Deities (Fake),吹云童子，布雾郎君（假）,Original,Evil,Dark Realm,Yaoguai,0,0
+80,Shuangta Jun Monk,Shuangta Jun Monk,双塔郡僧人,Original,Good,Earth,Shuangta Jun Monk,0,1
+81,Executioner,Executioner,刽子手,Original,Evil,Earth,Executioner,0,1
+82,Gong Gong,Gong Gong,共工,Folklore,Good,Outworlds,Gong Gong,0,0
+83,Yellow Emperor,Yellow Emperor,黄帝,Folklore,Good,Celestial Court,Yellow Emperor,0,1
+84,Xing Tian,Xing Tian,刑天,Folklore,Good,Earth,Xing Tian,0,1
+85,Ma Yi,Ma Yi,麻衣,Original,Evil,Celestial Court,Ma Yi,0,1
+86,Qing Yi,Qing Yi,青衣,Original,Good,Celestial Court,Qing Yi,0,1
+87,Youpoluo,Youpoluo,幽婆罗,Original,Good,Lingshan,Youpoluo,0,1
+88,Jinnaluo,kinnara,紧那罗,Buddha,Good,Lingshan,Wu Tian,1,0
+89,Hotel Host,Hotel Host,酒店老板,Original,Good,Earth,Hotel Host,0,1
+90,Abomen Priest,Abomen Priest,阿波门大祭司,Original,Evil,Earth,Abomen Priest,0,0
+91,A'liu,A'liu,阿溜,Original,Good,Earth,A'liu,0,0
+92,A'dao,A'dao,阿刀,Original,Good,Earth,A'dao,0,0
+93,A'xiu,A'xiu,阿羞,Original,Good,Earth,A'xiu,0,0
+94,Jinnaluo (Goodwill),kinnara (Goodwill),紧那罗（善念）,Buddha,Good,Dark Realm,Wu Tian,1,0
+95,Six Generals,Six Generals,六灵将,Original,Evil,Dark Realm,Six Generals,0,0
+96,Qingyang Daogu,Qingyang Daogu,青阳道姑,Original,Evil,Dark Realm,Giant Scorpion,1,0
+97,Lotus King,Lotus King,莲花大王,Tao,Good,Celestial Court,Ne Zha,1,0
+98,Six-eared macaque,Six-eared macaque,六耳猕猴,Novel,Evil,Earth,Six-eared macaque,1,0
+99,Black Lotus Messenger (Fake),Black Lotus Messenger (Fake),黑莲圣使（假）,Original,Good,Lingshan,Sun Wukong,1,0
+100,Donghua Dijun,Donghua Dijun,东华帝君,Tao,Good,Outworlds,Donghua Dijun,0,0
+101,Mo Ang,Mo Ang,摩昂,Original,Good,Sea,Mo Ang,0,1
+102,Biyou Xianzi,Biyou Xianzi,碧游仙子,Tao,Good,Outworlds,Biyou Xianzi,0,0
+103,Mysterious man,Mysterious man,神秘人,Original,Evil,Earth,Guiling Shengmu,1,0
+104,Qiao Grandfather (Illusion),Qiao Grandfather (Illusion),乔爷爷（幻觉）,Original,Evil,Earth,Guiling Shengmu,1,0
+105,Guiling Shengmu,Guiling Shengmu,龟灵圣母,Original,Evil,Earth,Guiling Shengmu,1,0
+106,Black Loong,Black Loong,乌龙,Original,Evil,Sea,Black Loong,0,0
+107,Bug Soldier,Bug Soldier,虫士兵,Original,Evil,Sea,Bug Soldier,0,1
+108,Bug Chancellor,Bug Chancellor,虫丞相,Original,Evil,Sea,Bug Chancellor,0,1
+109,Ma Wen,Ma Wen,马温,Original,Good,Lingshan,Sun Wukong,1,0
+110,Xiao Bai,Xiao Bai,小白,Original,Good,Sea,Xiao Bailong,1,0
+111,Restaurant Worker,Restaurant Host,饭店老板,Original,Good,Earth,Restaurant Host,0,1
+112,Chen Wuzhen,Chen Wuzhen,陈武真,Original,Evil,Earth,Chen Wuzhen,1,0
+113,Servant,Servant,陈家侍者,Original,Evil,Earth,Servant,0,1
+114,Chen Residants,Chen Residants,陈家郡居民,Original,Good,Earth,Chen Residants,0,1
+115,Chen Yuankuan,Chen Yuankuan,陈元宽,Original,Evil,Earth,Chen Yuankuan,1,0
+116,Yinwu Mountain Monk,Yinwu Mountain Monk,隐雾山僧人,Original,Good,Earth,Yinwu Mountain Monk,0,1
+117,Hotel Keeper (Chen),Hotel Keeper (Chen),陈家郡酒店老板,Original,Good,Earth,Hotel Keeper (Chen),0,1
+118,Biyou Xianzi (illusion),Biyou Xianzi (illusion),碧游仙子（幻觉）,Original,Evil,Earth,Chen Wuzhen,1,1
+119,Young Man,Young Man,年轻人,Original,Evil,Earth,Chen Yuankuan,1,1
+120,Scripture Guard,Scripture Guard,藏经阁护卫,Original,Evil,Dark Realm,Scripture Guard,0,1
+121,Zhu Bajie (Fake2),Zhu Bajie (Fake2),猪八戒（假2）,Original,Evil,Dark Realm,Black Cape,1,0
+122,Ne Zha (Fake2),Ne Zha (Fake2),哪吒（假2）,Original,Evil,Dark Realm,Giant Scorpion,1,0
+123,Wuzhuang Diciple,Wuzhuang Diciple,五庄观童子,Novel,Good,Outworlds,Wuzhuang Diciple,0,1
+124,Zhenyuan Zi,Zhenyuan Zi,镇元子,Novel,Good,Outworlds,Zhenyuan Zi,0,0
+125,Guan Yin (Fake2),Guan Yin (Fake2),观音菩萨（假2）,Original,Evil,Dark Realm,White Elephant,1,0
+126,White Elephant,White Elephant,白象,Buddha,Evil,Dark Realm,White Elephant,1,0
+127,Yaoguai Soldier (Fake),Yaoguai Soldier (Fake),妖怪兵（假）,Original,Good,Lingshan,Sun Wukong,1,0
+128,White Elephant (Fake),White Elephant (Fake),白象（假）,Original,Good,Lingshan,Sun Wukong,1,0
+129,Qiao Grandfather (Ghost),Qiao Grandfather (Ghost),乔爷爷（鬼魂）,Original,Good,Meng Realm,Qiao Grandfather,0,1
+130,Qiao Grandmother (Ghost),Qiao Grandmother (Ghost),乔奶奶（鬼魂）,Original,Good,Meng Realm,Qiao Grandmother,0,1
+131,Qiao Residents (Ghost),Qiao Residents (Ghost),乔家庄居民（鬼魂）,Original,Good,Meng Realm,Qiao Residents,0,1
+132,Biyou Xianzi (Ghost),Biyou Xianzi (Ghost),碧游仙子（鬼魂）,Original,Good,Meng Realm,Biyou Xianzi,0,1
+133,Erlang Shen,Erlang Shen,二郎神,Tao,Good,Outworlds,Erlang Shen,0,0
+134,Kun Lun Gardian,Kun Lun Gardian,昆仑山护山神,Tao,Good,Outworlds,Kun Lun Gardian,0,1
+135,Rhino Guai (Fake),Rhino Guai (Fake),犀牛精（假）,Original,Good,Dark Realm,Zhu Bajie,1,0
+136,Qishang Zunzhe,Qishang Zunzhe,七伤尊者,Original,Evil,Asura Realm,Qishang Zunzhe,0,1
+137,Yuan Shoucheng,Yuan Shoucheng,袁守诚,Novel,Good,Earth,Yuan Shoucheng,0,0
+138,Master Duli (Fake),Master Duli (Fake),都里大师（假）,Original,Good,Lingshan,Sun Wukong,1,0
+139,Qin Guang Wang (Fake),Qin Guang Wang (Fake),秦广王（假）,Original,Evil,Dark Realm,Yaoguai,0,0
+140,Lingyao (Fake),Lingyao (Fake),灵妖（假）,Original,Good,Lingshan,Sun Wukong,1,0
