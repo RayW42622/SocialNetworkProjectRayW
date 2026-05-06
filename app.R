@@ -259,6 +259,7 @@ network1.555 <- reactive({
 output$JTWA_NetworkIDTH <- renderPlot({
   JTWA_net <- network1.555()
   JTWA_net <- JTWA_net |> activate(edges) |> filter(Density >= input$thres)
+  JTWA_net <- JTWA_net |> activate(nodes) |> mutate(degree2 = centrality_degree()) |> filter(degree2>0)
   p<- ggraph(JTWA_net, layout = 'fr') +
     geom_edge_link(aes(width=Density*2), alpha = 0.4, color = "grey", arrow = arrow(length = unit(4, 'mm')))+ 
     geom_node_point(aes(color=.data[[input$NodesD]], size = .data[[input$sizeD]], shape = .data[[input$ShapeD]])) +
