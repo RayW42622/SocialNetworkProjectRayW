@@ -22,18 +22,29 @@ ui <-fluidPage(
     title = "The fan-favorite afterstory of a classic", 
     sidebar = sidebar ("Menu options"), 
     card(
-      card_header("Introduction"), "This is a page focusing on showing the character relationships in the show Journey to the West Afterstory. For each plot, Toggle between degree centrality and degree centrality under each section to change node sizes according to them, or change the bar graphs. This may tell you that the involvement in the main story matters more than the amount of connections in terms of being a broker.
-
-…
-"),
+      card_header("Introduction"), HTML("This is a page focusing on showing the character relationships in the show Journey to the West Afterstory. The network is directed, the nodes are the characters and the edges are the number of lines they talk to each other.
+<br>
+<br> For each plot, Toggle between degree centrality and degree centrality under each section to change node sizes according to them, or change the bar graphs. Use a number to change the size of the texts in case you miss any important names. This may tell you that the involvement in the main story matters more than the amount of connections in terms of being a broker.
+<br>
+<br> For the first and third graph, the axis can be toggled to show the homes or origins of a character (check the box below for the definitions). The shapes in the second and fourth graph are of the same attributes. The nodes panel on the first two graphs only contain the sides the characters are on, while it can be changed between sides and true identity at the last 2 graphs since we may get less nodes to work with. In the last graph, you can type a number and see what connections have more lines than this number, this can show you the most dense connections. The interactive network can be enlarged, and by clicking on each node, you can see what characters this character connects to.
+<br>
+<br> Observing with degree centrality, the absolute main Sun Wukong reasonably ranked the first, while other highly important characters followed. What is surprising is that the rest of the main cast in the novel (Tang Monk, Sha Seng, Zhu Bajie, Xiao Bailong) aren’t in the top 5 since they have less involvement in the main story. The most noteworthing point is that Tang Monk, a character who hardly interacts with anyone apart from his disciples, has more degree and betweenness centrality than all of them except Wukong. The original characters also play major roles than most characters from religions and the novel. This signifies the creators’ attempt to add originality to the show instead of being a plain sequel.
+<br>
+<br> From the show, I particularly studied the transforming characters. These characters change identities to outsmart their enemies. By sorting them with true identities, we can see that all characters on the list are highly intelligent: Sun Wukong, the absolute main character that gathers information from everywhere, has the most transformation, which is 8 of them, while Six-Eared Macaque, a smart villain who tricked Sun Wukong, has 6 fake identities. And since they are constantly tricking each other, their characters are quite densely connected. Transformation plots are featured in the original novel as the dominant method for battle of wits against Tang Monk and other disciples of his, but was underdeveloped because Sun Wukong has the ability to see through them. As the best way to pay homage to it, the producers removed Wukong’s ability to see through transformations and made him infer whether one is true or fake with his intelligence. This increases the complexity of the show and keeps the style of the novel.
+")),
     card(
       card_header("Concepts"), "Some of the concepts involved in the graphs, you may want to know",
       selectInput("select", 
                   "select an option", 
-                  choices = list("Sides" = "Good or Evil, only as described in the show, but not in other materials.", 
-                                 "Home" = "The places the characters call home, aren't necessarily their places of birth."),
+                  choices = list("Select" = HTML("Select"),
+                                 "Yaoguai" = HTML("Something that engages in Tao’s ways and gains supernatural powers, often takes the form of a human. Like monsters in Chinese, but not necessarily evil."),
+                                 "Sides" = HTML("Good or Evil, only as described in the show, but not in other materials. Ex. Wude Xingjun is described as justice in Tao belief, but is an evil character in the show, so he belongs to the evil category."), 
+                                 "Home" = HTML("The places the characters call home, aren't necessarily their places of birth: Lingshan: Buddhas’ sanctuary, Celestial Court: home for Tao deities, Dark Realm: home for most Yaoguai and antagonists, Earth: home for human and some Yaoguai, Hell: home for the dead, Outworlds: home for deities away from the court, Sea: home for the dragons and water-related Yaoguai, Asura Realm: home for Ayinafa and his traps"),
+                                 "Origin" = "The source a character is from: Tao religion, Buddha religion, Chinese Folklore religion, Chinese History, original characters or from the novel Journey to the West.",
+                                 "True Identity" = "If a node is a fake character, its true identity will be labeled. Ex. Zhu Bajie (Fake)’s true identity is Six-Eared Macaque, that means that Six-Eared Macaque took the shape of Zhu Bajie at a point in the story."),
                   selected =1), 
-      textOutput("ourVariable")
+      textOutput("ourVariable"),
+      height = "500px"
       ), 
     
     
@@ -52,6 +63,13 @@ ui <-fluidPage(
                      "choose a centrality measure", 
                      choices = list("Degree Centrality" = "degree", 
                                     "Betweenness Centrality" = "betweenness")),
+         numericInput( 
+                     "TsizeA", 
+                     "Text size", 
+                      value = 3, 
+                       min = 1, 
+                      max = 50 
+         ),
          plotOutput("JTWA_NetworkID"), height = "1000px"),
     
     #Card1.5
@@ -69,6 +87,13 @@ ui <-fluidPage(
                      "choose a centrality measure", 
                      choices = list("Degree Centrality" = "degree", 
                                     "Betweenness Centrality" = "betweenness")),
+         numericInput( 
+           "TsizeB", 
+           "Text size", 
+           value = 3, 
+           min = 1, 
+           max = 50 
+         ),
          plotOutput("JTWA_NetworkIDSimple"), height = "1500px"),
     
     #Card1.55
@@ -87,6 +112,13 @@ ui <-fluidPage(
                      "choose a centrality measure", 
                      choices = list("Degree Centrality" = "degree", 
                                     "Betweenness Centrality" = "betweenness")),
+         numericInput( 
+           "TsizeC", 
+           "Text size", 
+           value = 3, 
+           min = 1, 
+           max = 50 
+         ),
          plotOutput("JTWA_NetworkIDTF"), height = "1000px"),
     
     #Card1.555
@@ -114,6 +146,13 @@ ui <-fluidPage(
                      choices = list("Home" = "Home", 
                                     "Origin" = "Origin"), 
                      selected = 1),
+         numericInput( 
+           "TsizeD", 
+           "Text size", 
+           value = 3, 
+           min = 1, 
+           max = 50 
+         ),
          plotOutput("JTWA_NetworkIDTH"), height = "1000px"),
     
     #Card2
@@ -175,8 +214,9 @@ output$JTWA_NetworkID <- renderPlot({
     scale_edge_width(range = c(.1,3))+ 
     geom_node_point(aes(color=.data[[input$NodesA]], size = .data[[input$sizeA]]), show.legend = TRUE) +
     scale_color_manual(values=c("red", "black", "lightblue")) +
+    scale_shape_manual(values=c(1, 2, 3, 4, 5, 6, 7, 8, 16, 17)) +
     scale_size(range = c(1, 10))+
-    geom_node_text(aes(label=Revised_Names), color = "black", size = 2) + 
+    geom_node_text(aes(label=Revised_Names), color = "black", size = input$TsizeA) + 
     theme_void() + 
     coord_fixed()
 
@@ -200,11 +240,12 @@ network1.5 <- reactive({
 })
 output$JTWA_NetworkIDSimple <- renderPlot({
   JTWA_net <- network1.5()
-  p<- ggraph(JTWA_net, layout = 'sugiyama') +
+  p<- ggraph(JTWA_net, layout = 'fr') +
     geom_edge_link(aes(width=Density*2), alpha = 0.4, color = "grey", arrow = arrow(length = unit(4, 'mm')))+ 
     geom_node_point(aes(color=.data[[input$NodesB]], size = .data[[input$sizeB]], shape = .data[[input$ShapeB]])) +
     scale_color_manual(values=c("red", "black", "lightblue")) +
-    geom_node_text(aes(label=Revised_Names), color = "black", size = 2, repel = TRUE) + 
+    scale_shape_manual(values=c(1, 2, 3, 4, 5, 6, 7, 8, 16, 17)) +
+    geom_node_text(aes(label=Revised_Names), color = "black", size = input$TsizeB, repel = TRUE) + 
     theme_void()
   
   p
@@ -235,7 +276,8 @@ output$JTWA_NetworkIDTF <- renderPlot({
     scale_edge_width(range = c(.1,3))+ 
     geom_node_point(aes(color=.data[[input$NodesC]], size = .data[[input$sizeC]]), show.legend = TRUE) +
     scale_size(range = c(1, 10))+
-    geom_node_text(aes(label=Revised_Names), color = "black", size = 2) + 
+    scale_shape_manual(values=c(1, 2, 3, 4, 5, 6, 7, 8, 16, 17)) +
+    geom_node_text(aes(label=Revised_Names), color = "black", size = input$TsizeC) + 
     theme_void() + 
     coord_fixed() 
   
@@ -263,7 +305,8 @@ output$JTWA_NetworkIDTH <- renderPlot({
   p<- ggraph(JTWA_net, layout = 'fr') +
     geom_edge_link(aes(width=Density*2), alpha = 0.4, color = "grey", arrow = arrow(length = unit(4, 'mm')))+ 
     geom_node_point(aes(color=.data[[input$NodesD]], size = .data[[input$sizeD]], shape = .data[[input$ShapeD]])) +
-    geom_node_text(aes(label=Revised_Names), color = "black", size = 2, repel = TRUE) + 
+    geom_node_text(aes(label=Revised_Names), color = "black", size = input$TsizeD, repel = TRUE) + 
+    scale_shape_manual(values=c(1, 2, 3, 4, 5, 6, 7, 8, 16, 17)) +
     theme_void()
   
   p
@@ -353,7 +396,8 @@ output$JTWA_Bar <- renderPlot({
   JTWA_net <- network() 
   JTWA_df <- JTWA_net |> activate(nodes) |> as_tibble()
   p<- ggplot(JTWA_df, aes(x= reorder(Revised_Names, .data[[input$sizeE]]), y=.data[[input$sizeE]])) + 
-    geom_col(fill = "lightblue") + 
+    labs(x = "characters") +
+    geom_col(aes(fill = Side, color = Origin)) + 
     coord_flip() 
   
   p
