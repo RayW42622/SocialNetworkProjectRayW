@@ -41,7 +41,8 @@ ui <-fluidPage(
                                  "Sides" = HTML("Good or Evil, only as described in the show, but not in other materials. Ex. Wude Xingjun is described as justice in Tao belief, but is an evil character in the show, so he belongs to the evil category."), 
                                  "Home" = HTML("The places the characters call home, aren't necessarily their places of birth: Lingshan: Buddhas’ sanctuary, Celestial Court: home for Tao deities, Dark Realm: home for most Yaoguai and antagonists, Earth: home for human and some Yaoguai, Hell: home for the dead, Outworlds: home for deities away from the court, Sea: home for the dragons and water-related Yaoguai, Asura Realm: home for Ayinafa and his traps"),
                                  "Origin" = "The source a character is from: Tao religion, Buddha religion, Chinese Folklore religion, Chinese History, original characters or from the novel Journey to the West.",
-                                 "True Identity" = "If a node is a fake character, its true identity will be labeled. Ex. Zhu Bajie (Fake)’s true identity is Six-Eared Macaque, that means that Six-Eared Macaque took the shape of Zhu Bajie at a point in the story."),
+                                 "True Identity" = "If a node is a fake character, its true identity will be labeled. Ex. Zhu Bajie (Fake)’s true identity is Six-Eared Macaque, that means that Six-Eared Macaque took the shape of Zhu Bajie at a point in the story.",
+                                  "Insignificant Characters" = "A character that doesn't have an actual name, is one of the mob characters or have no influence to the plot. ex: shrimp soldier."),
                   selected =1), 
       textOutput("ourVariable"),
       height = "500px"
