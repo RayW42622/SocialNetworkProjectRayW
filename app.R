@@ -76,7 +76,7 @@ ui <-fluidPage(
                        min = 1, 
                       max = 50 
          ),
-         plotOutput("JTWA_NetworkID"), height = "1000px"),
+         plotOutput("JTWA_NetworkID"), height = "1500px"),
     
     #Card1.5
     card(card_header("Same graph, omitted insignificant characters"),
