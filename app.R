@@ -33,6 +33,11 @@ ui <-fluidPage(
 <br> From the show, I particularly studied the transforming characters. These characters change identities to outsmart their enemies. By sorting them with true identities, we can see that all characters on the list are highly intelligent: Sun Wukong, the absolute main character that gathers information from everywhere, has the most transformation, which is 8 of them, while Six-Eared Macaque, a smart villain who tricked Sun Wukong, has 6 fake identities. And since they are constantly tricking each other, their characters are quite densely connected. Transformation plots are featured in the original novel as the dominant method for battle of wits against Tang Monk and other disciples of his, but was underdeveloped because Sun Wukong has the ability to see through them. As the best way to pay homage to it, the producers removed Wukong’s ability to see through transformations and made him infer whether one is true or fake with his intelligence. This increases the complexity of the show and keeps the style of the novel.
 ")),
     card(
+      card_header("Data Collection"),
+      HTML("I collected my data by watching the show and taking notes for each sentence the character says. With a google sheet document, I type the character speaking in the source column and the characters he speaks to at the target column. After each sentence, I type a P for present in the density column. At the end of each episode, I count the Ps in each density column and create a new sheet for the next episode to avoid mixing up characters. <br> I downloaded the 30 sheets for each episode and used rbind to merge them in R. I arranged them by sources and targets, then manually calculated the edge density and produced the final edge list with google sheet.
+")),
+    
+    card(
       card_header("Concepts"), "Some of the concepts involved in the graphs, you may want to know",
       selectInput("select", 
                   "select an option", 
