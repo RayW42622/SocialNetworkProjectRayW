@@ -20,14 +20,20 @@ ui <-fluidPage(
   
   page_sidebar(
     title = "The fan-favorite afterstory of a classic", 
-    sidebar = sidebar ("Menu options"), 
+    sidebar = sidebar ("How to use",
+                       HTML(" <br> <br> For each plot, Toggle between degree centrality and degree centrality under each section to change node sizes according to them, or change the bar graphs. Use a number to change the size of the texts.
+<br>
+<br> For the first and third graph, the axis can be toggled to show the homes or origins of a character (check the box below for the definitions). The shapes in the second and fourth graph are of the same attributes.
+<br>
+<br>The nodes panel on the first two graphs only contain the sides the characters are on, while it can be changed between sides and true identity at the last 2 graphs since we may get less nodes to work with.
+<br>
+<br>In the last graph, you can type a number and see what connections have more lines than this number, this can show you the most dense connections.
+<br>
+<br>The interactive network can be enlarged, and by clicking on each node, you can see what characters this character connects to.
+<br>"),
+                       width = 300), 
     card(
-      card_header("Introduction"), HTML("This is a page focusing on showing the character relationships in the show Journey to the West Afterstory. The network is directed, the nodes are the characters and the edges are the number of lines they talk to each other.
-<br>
-<br> For each plot, Toggle between degree centrality and degree centrality under each section to change node sizes according to them, or change the bar graphs. Use a number to change the size of the texts in case you miss any important names. This may tell you that the involvement in the main story matters more than the amount of connections in terms of being a broker.
-<br>
-<br> For the first and third graph, the axis can be toggled to show the homes or origins of a character (check the box below for the definitions). The shapes in the second and fourth graph are of the same attributes. The nodes panel on the first two graphs only contain the sides the characters are on, while it can be changed between sides and true identity at the last 2 graphs since we may get less nodes to work with. In the last graph, you can type a number and see what connections have more lines than this number, this can show you the most dense connections. The interactive network can be enlarged, and by clicking on each node, you can see what characters this character connects to.
-<br>
+      card_header("Introduction & findings"), HTML("This is a page focusing on showing the character relationships in the show Journey to the West Afterstory. The network is directed, the nodes are the characters and the edges are the number of lines they talk to each other.
 <br> Observing with degree centrality, the absolute main Sun Wukong reasonably ranked the first, while other highly important characters followed. What is surprising is that the rest of the main cast in the novel (Tang Monk, Sha Seng, Zhu Bajie, Xiao Bailong) aren’t in the top 5 since they have less involvement in the main story. The most noteworthing point is that Tang Monk, a character who hardly interacts with anyone apart from his disciples, has more degree and betweenness centrality than all of them except Wukong. The original characters also play major roles than most characters from religions and the novel. This signifies the creators’ attempt to add originality to the show instead of being a plain sequel.
 <br>
 <br> From the show, I particularly studied the transforming characters. These characters change identities to outsmart their enemies. By sorting them with true identities, we can see that all characters on the list are highly intelligent: Sun Wukong, the absolute main character that gathers information from everywhere, has the most transformation, which is 8 of them, while Six-Eared Macaque, a smart villain who tricked Sun Wukong, has 6 fake identities. And since they are constantly tricking each other, their characters are quite densely connected. Transformation plots are featured in the original novel as the dominant method for battle of wits against Tang Monk and other disciples of his, but was underdeveloped because Sun Wukong has the ability to see through them. As the best way to pay homage to it, the producers removed Wukong’s ability to see through transformations and made him infer whether one is true or fake with his intelligence. This increases the complexity of the show and keeps the style of the novel.
