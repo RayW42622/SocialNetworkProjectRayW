@@ -34,7 +34,8 @@ ui <-fluidPage(
                        width = 300), 
     card(
       card_header("Introduction & findings"), HTML("This is a page focusing on showing the character relationships in the show Journey to the West Afterstory. The network is directed, the nodes are the characters and the edges are the number of lines they talk to each other.
-<br> Observing with degree centrality, the absolute main Sun Wukong reasonably ranked the first, while other highly important characters followed. What is surprising is that the rest of the main cast in the novel (Tang Monk, Sha Seng, Zhu Bajie, Xiao Bailong) aren’t in the top 5 since they have less involvement in the main story. The most noteworthing point is that Tang Monk, a character who hardly interacts with anyone apart from his disciples, has more degree and betweenness centrality than all of them except Wukong. The original characters also play major roles than most characters from religions and the novel. This signifies the creators’ attempt to add originality to the show instead of being a plain sequel.
+<br>
+<br>Observing with degree centrality, the absolute main Sun Wukong reasonably ranked the first, while other highly important characters followed. What is surprising is that the rest of the main cast in the novel (Tang Monk, Sha Seng, Zhu Bajie, Xiao Bailong) aren’t in the top 5 since they have less involvement in the main story. The most noteworthing point is that Tang Monk, a character who hardly interacts with anyone apart from his disciples, has more degree and betweenness centrality than all of them except Wukong. The original characters also play major roles than most characters from religions and the novel. This signifies the creators’ attempt to add originality to the show instead of being a plain sequel.
 <br>
 <br> From the show, I particularly studied the transforming characters. These characters change identities to outsmart their enemies. By sorting them with true identities, we can see that all characters on the list are highly intelligent: Sun Wukong, the absolute main character that gathers information from everywhere, has the most transformation, which is 8 of them, while Six-Eared Macaque, a smart villain who tricked Sun Wukong, has 6 fake identities. And since they are constantly tricking each other, their characters are quite densely connected. Transformation plots are featured in the original novel as the dominant method for battle of wits against Tang Monk and other disciples of his, but was underdeveloped because Sun Wukong has the ability to see through them. As the best way to pay homage to it, the producers removed Wukong’s ability to see through transformations and made him infer whether one is true or fake with his intelligence. This increases the complexity of the show and keeps the style of the novel.
 ")),
@@ -44,16 +45,31 @@ ui <-fluidPage(
 ")),
     
     card(
-      card_header("Concepts"), "Some of the concepts involved in the graphs, you may want to know",
+      card_header("Concepts"), "Some of the concepts involved in the graphs, important for interpreting the results",
       selectInput("select", 
                   "select an option", 
                   choices = list("Select" = HTML("Select"),
                                  "Yaoguai" = HTML("Something that engages in Tao’s ways and gains supernatural powers, often takes the form of a human. Like monsters in Chinese, but not necessarily evil."),
                                  "Sides" = HTML("Good or Evil, only as described in the show, but not in other materials. Ex. Wude Xingjun is described as justice in Tao belief, but is an evil character in the show, so he belongs to the evil category."), 
-                                 "Home" = HTML("The places the characters call home, aren't necessarily their places of birth: Lingshan: Buddhas’ sanctuary, Celestial Court: home for Tao deities, Dark Realm: home for most Yaoguai and antagonists, Earth: home for human and some Yaoguai, Hell: home for the dead, Outworlds: home for deities away from the court, Sea: home for the dragons and water-related Yaoguai, Asura Realm: home for Ayinafa and his traps"),
-                                 "Origin" = "The source a character is from: Tao religion, Buddha religion, Chinese Folklore religion, Chinese History, original characters or from the novel Journey to the West.",
-                                 "True Identity" = "If a node is a fake character, its true identity will be labeled. Ex. Zhu Bajie (Fake)’s true identity is Six-Eared Macaque, that means that Six-Eared Macaque took the shape of Zhu Bajie at a point in the story.",
-                                  "Insignificant Characters" = "A character that doesn't have an actual name, is one of the mob characters or have no influence to the plot. ex: shrimp soldier."),
+                                 "Home" = HTML("The places the characters call home, aren't necessarily their places of birth. Check the concepts below for details."),
+                                 "Home: Lingshan" = "The sanctuary of Buddha, characters like Ru Lai and Sun Wukong belong here.",
+                                 "Home: Celestial Court" = "The court of important Tao deities that governs the human realm, characters like Jade Emperor belong here.",
+                                 "Home: Dark Realm" = "A realm between the Earth, Sky and Hell where souls of Yaoguais gather. characters like Wu Tian belong here.",
+                                 "Home: Earth" = "Realm for human and some of the Yaoguais, characters like Qiao Linger belong here.",
+                                 "Home: Hell" = "Realm of ghosts and the dead, characters like Qin Guang Wang belong here.",
+                                 "Home: Outworlds" = "Realms that were discovered by deities that don't work for the celestial court, and are hid from people that the masters don't want to see, characters like Donghua Dijun belong here.",
+                                 "Home: Sea" = "The four seas in China, they were governed by the dragons, characters like Dragon King of South Sea belong here.",
+                                 "Home: Meng Realm" = "A world Ru Lai explored for the souls of those who were wronged, and was inhibited when hell was taken over by evil forces, characters like Qiao Grandpa's ghost belong here.",
+                                 "Home: Asura Realm" = "A realm where Ayinafa builds his kingdom of gears, characters like Ayinafa belong here.",
+                                 "Origin" = "The source a character is from. Check the concepts below for details.",
+                                 "Origin: Tao" = "Tao Religion, characters like Jade Emperor belong to this category.",
+                                 "Origin: Buddha" = "Buddhism Religion, characters like Ru Lai belong to this category.",
+                                 "Origin: Folklore" = "Chinese Folklore Religion, characters like Yellow Emperor belong to this category.",
+                                 "Origin: Chinese History" = "Characters who exist in real history. Tang Taizong belongs to this category.",
+                                 "Origin: Original" = "Characters created by the showitself, characters like Qiao Linger and Ayinafa belong to this category.",
+                                 "Origin: Novel" = "Characters who appeared in the Novel Journey to the West (the prequel of this show), characters like Sun Wukong belong to this categoty. Characters that appeared in the novel but is a character in other relign is considered a character of that religion instead of from the novel.",
+                                 "True Identity" = "If a node is a fake character, its true identity will be labeled. Ex. Zhu Bajie (Fake)’s true identity is Six-Eared Macaque, that means that Six-Eared Macaque took the shape of Zhu Bajie at a point in the story. The sides and homes of the fake characters align with their true identities, their origins are always original.",
+                                 "Insignificant Characters" = "A character that doesn't have an actual name, is one of the mob characters or have no influence to the plot. ex: shrimp soldier."),
                   selected =1), 
       textOutput("ourVariable"),
       height = "500px"
@@ -61,7 +77,7 @@ ui <-fluidPage(
     
     
     #Card1
-    card(card_header("All characters, choose how to sort"),
+    card(card_header("Graph 1: All characters, choose how to sort"),
          selectInput("NodesA",
                      "Nodes by color", 
                      choices = list( "Sides" = "Side"), 
@@ -85,7 +101,7 @@ ui <-fluidPage(
          plotOutput("JTWA_NetworkID"), height = "1500px"),
     
     #Card1.5
-    card(card_header("Same graph, omitted insignificant characters"),
+    card(card_header("Graph 2: Alternative layout, omitted insignificant characters"),
          selectInput("NodesB",
                      "Nodes by color", 
                      choices = list( "Sides" = "Side"), 
@@ -109,7 +125,7 @@ ui <-fluidPage(
          plotOutput("JTWA_NetworkIDSimple"), height = "1500px"),
     
     #Card1.55
-    card(card_header("Let's focus on the transforming characters"),
+    card(card_header("Graph 3: Let's focus on the transforming characters"),
          selectInput("NodesC",
                      "Nodes by color", 
                      choices = list( "Sides" = "Side",
@@ -134,7 +150,7 @@ ui <-fluidPage(
          plotOutput("JTWA_NetworkIDTF"), height = "1000px"),
     
     #Card1.555
-    card(card_header("Thresholding: omit edges below certain density"),
+    card(card_header("Graph 4: Thresholding: omit edges below certain density"),
          
          numericInput( 
            "thres", 
@@ -177,7 +193,7 @@ ui <-fluidPage(
          visNetworkOutput("int_network"), height = "2000px"),
     
     #Card3
-    card(card_header("bar"),
+    card(card_header("Bar graph of the 2 Centrality measures"),
          selectInput("sizeE",
                      "choose a centrality measure", 
                      choices = list("Degree Centrality" = "degree", 
@@ -185,7 +201,26 @@ ui <-fluidPage(
                      selected = 1), 
          plotOutput("JTWA_Bar"), height = "1700px")
     
-    ))
+    ),
+  card(
+  card_header("Trivia"), "Some of the trivia when making this project, also some information about the show.",
+  selectInput("select2", 
+              "select an option", 
+              choices = list("Select" = HTML("Select"),
+                             "Translation" = "Translating a Chinese concept is hard, so I borrowed some translations from Black Myth Wukong. For example, the definition for Yaoguai.",
+                             "The show's double" = "The same plot, even same characters, were adapted to another show by the same team. it is called Dare Stone Male Tiandong (石敢当之雄峙天东). When you search for some of the original characters in Journey to the West Afterstory, you may see descriptions of them in this show instead. It flopped hard with a plot so identical to its predecessor it's almost unnatual. However, I have a theory that this show was referenced in Black Myth Wukong with by the way to summon the hidden boss Shi Gandang.",
+                             "Novel readers' most Hated character's rebirth" = "Tang Monk was hated by every human being who read Journey to the West. He is the one with least magic power and least trust for his most loyal diciple Sun Wukong. He almost murdered Sun Wukong for killing Yaoguais that transform in order to eat him, and did nothing but moaning in plight. However, in this show, Tang monk is a different person: He dares entering hell to save Sun Wukong, and leads the Buddhas to break through the evil forces' lockdown. He even has more battle scenes than his diciple Sha Seng. Although this version of Tang Monk also carries some trait from the original, it was criticized by many by being too perfect. But as a fan of the novel, I like this change. It's like an unlikely dream coming true, and it may be the very first member of the fighting type of Tang Monks that may appear in later media and games.",
+                             "Different from other sequals" = "Most of the abundant other sequals of JTTW feature turning the Buddhas and the Celestial Court evil and therefore enemies of Sun Wukong since the novel itself also contains some irony towards them, and that is what makes Journey to the West Afterstory Great: It sustained the generally good profile of Buddhas and the Celestial Court, and united them to fight a greater threat which also has an origin (Mara in Buddism, aka. Wu Tian). Also, the choices of returning villains are very reasonable. Instead of making popular villains that turned good rebel their masters, like Red Boy and Black Bear (see Black Myth), the show used characters that are less popular but relatively reasonable to reappear or revive, like Nine-Headed Bug and Six-Eared Macaque. It stands out as an accurate 'white myth' in the flood of 'black myth's in Chinese JTTW sequals. ",
+                             "You Know the main by another name" = "Sun Wukong is the blueprint of the well known Son Goku. The later borrows the nimbus and the stick from him.",
+                             "The fan-favorite big villain" = "Wu Tian, as the biggest villain of the show, is loved by many watchers of the show. Although he's cruel and ambitious, he treats his minions surprisingly well. Although they never succeeded, he didn't murder any of them like any other villain. He even praise failed minions for giving him more insight on his nemesis Sun Wukong. He also shows high respect to opponents that he favor and never breaks a promise. This charisma attracted lots of fans, and the followers of Wu Tian's actor still calls him 'Wutian Fozu' to this day.",
+                             "The show on Youtube" = "I was surprised that this show is avaliable on Youtube. However, the sound quality is unbearable. The subtitles with translations may help. （https://www.youtube.com/watch?v=QtvnN3JwZzs&list=PLyQama-tFxz14d1X90Qxbj6WzutGwD5r1）",
+                             "An ending theme more popular than the show" = "The ending theme of the show, Hog Dou by Mao Amin, got much more love from the public than this show. However, the opening by Liu Huan, one of the top singer in China, received less attention.",
+                             "The 'Journey to the West Afterstory' type low budget" = "This show features a very limited budget, so the fighting scenes are of amazingly bad qualities. Most of the fighting involve repeating one single shot several times and even mirroring it for another series of shots, as well as low quality 3D models sticking out from nowhere. The show is also filled with awfully long memory recall scenes that often last for half an episode. These definitely didn't appeal to the TV show lovers who enjoy explosions and visual shocks of ripping and tearing Japanese soldiers. That is why this show was harshly hated at its debut but received praise when people fianlly paid attention to the plot."
+                             ),
+                              selected = 1),
+                              textOutput("ourVariable2"),
+                              height = "600px"),
+)
 
 # Section 2. The server section defines how our app works. Here's where we will put all the network analysis. 
 
@@ -195,6 +230,9 @@ server <- function(input, output) {
   
   output$ourVariable <- renderText({
     paste(input$select)
+  })
+  output$ourVariable2 <- renderText({
+    paste(input$select2)
   })
   
 # let's create a simple example network with 10 nodes and calulate the degree centrality
