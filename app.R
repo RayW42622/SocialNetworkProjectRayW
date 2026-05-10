@@ -30,7 +30,8 @@ ui <-fluidPage(
 <br>In the last graph, you can type a number and see what connections have more lines than this number, this can show you the most dense connections.
 <br>
 <br>The interactive network can be enlarged, and by clicking on each node, you can see what characters this character connects to.
-<br>"),
+<br>
+<br>Be sure to reach the bottom and don't miss the trivia part!"),
                        width = 300), 
     card(
       card_header("Introduction & findings"), HTML("This is a page focusing on showing the character relationships in the show Journey to the West Afterstory. The network is directed, the nodes are the characters and the edges are the number of lines they talk to each other.
